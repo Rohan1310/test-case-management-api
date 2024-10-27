@@ -76,7 +76,16 @@ SECRET_KEY=<YOUR_SECRET_KEY>
 JWT_SECRET_KEY=<YOUR_JWT_SECRET_KEY>
 
 
-Step 6: Run the Application
+Step 6 : Run Migration 
+
+flask db init
+
+flask db migrate -m "Initial migration"
+
+flask db upgrade
+
+
+Step 7: Run the Application
 
 Finally, run the Flask application with the following command:
 
