@@ -1,0 +1,5 @@
+migrations
+venv
+flask_session
+__pycache__
+.env
