@@ -6,3 +6,5 @@ Flask-JWT-Extended
 authlib
 psycopg2-binary
 python-dotenv
+flask_session
+requests
