@@ -26,6 +26,6 @@ CREATE TABLE `test_case` (
     module_id INT NOT NULL,
     summary TEXT NOT NULL,
     description TEXT,
-    attachment VARCHAR(255),
+    attachments VARCHAR(255),
     FOREIGN KEY (module_id) REFERENCES `module`(id) ON DELETE CASCADE
 );

@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from flask_session import Session
-from config import Config
+from config import UPLOAD_FOLDER, Config
 from authlib.integrations.flask_client import OAuth
 
 db = SQLAlchemy()
@@ -17,6 +17,7 @@ server_session = Session()
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
+    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
     # Configure server-side session
     app.config['SESSION_TYPE'] = 'filesystem'

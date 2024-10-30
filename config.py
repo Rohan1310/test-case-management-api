@@ -4,6 +4,11 @@ from dotenv import load_dotenv
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
 
+UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads')
+
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or os.urandom(24)
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
